@@ -10,7 +10,7 @@ export class AppComponent {
   below100 = '<=100';
   completeItemsAfterAllFilters:any = this.p.getItems();
   option:any;
-  title = 'menu-app';
+  title = 'add-to-cart-backup';
   filters = [];
   isMehfil:boolean = false;
   isParadise:boolean = false;

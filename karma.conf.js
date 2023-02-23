@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/menu-app'),
+      dir: require('path').join(__dirname, './coverage/add-to-cart-backup'),
       subdir: '.',
       reporters: [
         { type: 'html' },
