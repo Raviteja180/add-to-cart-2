@@ -1,0 +1,15 @@
+<div class="items">
+    <ul *ngFor = "let item of items ">
+        <h3>{{item.restaurant}}</h3>
+       <li>{{item.name}}</li>
+       <li>{{item.type}}</li>
+       <li>{{item.location}}</li>
+       <li style="color:rgb(76, 77, 88);">{{item.cost | currency:'INR'}}</li>
+       <div class="mt-2">
+
+           <button (click) = "addCartBtn(item)" >add to cart</button>
+       </div>
+        
+    </ul>
+    
+</div>

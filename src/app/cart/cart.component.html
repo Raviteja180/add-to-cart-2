@@ -1,0 +1,21 @@
+
+<div class="cart p-3">
+    <h5>Your items</h5>
+    <div *ngFor = "let item of cartItems" >
+        <p>{{item.name}}</p>
+        <div>
+
+            <button class="addSub" (click) = "addSingleItem(item)">+</button>{{item.quantity}}
+            <button class="addSub" (click) ="removeSingleItem(item)">-</button>
+        </div>
+        <!-- <p>{{item.quantity}}</p> -->
+       <p>cost : {{item.quantity}} * {{item.cost}} = {{item.thisItemTotalCost}}</p>
+       
+        <!-- <p></p> -->
+    </div>
+    <div class="mt-3">
+        <h5>Total items cost</h5>
+            <p>{{totalItemsCost}}</p>
+    </div>
+    <button  class="btn btn-success" [disabled]="isCartEmpty">proceed to pay</button>
+</div>

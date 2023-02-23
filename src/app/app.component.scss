@@ -1,0 +1,56 @@
+// .main{
+//     display :grid;
+//     grid-template-columns: auto auto auto;
+// }
+.main{
+    // background-color: #FFC529;
+    color:#2f3542
+}
+
+h1{
+    text-align:center;
+}
+.search{
+    width:80%;
+    // border:1px solid black;
+    display: flex;
+    // grid-template-columns:  1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin:20px auto;
+    // grid-column-gap: 10px;
+}
+.grid2Column{
+    // border:1px solid black;
+    width:60%;
+    // grid-column-start: 1;
+    // grid-column-end: 2;
+    // grid
+}
+select{
+    margin-right:20px;
+    border-radius: 3px;
+    padding:5px;
+}
+
+
+.checkBox,.radioBox{
+ background-color: #2f3542;
+ color: antiquewhite;
+ border-radius: 10px;
+}
+div>button{
+    border-radius:10px;
+    padding:5px 10px;
+    margin-top:20px;
+    background-color: #d1d8e0;
+    color:#0e0d0d;
+    border:none;
+
+}
+.removeFilters{
+    text-align: center;
+}
+
+
+

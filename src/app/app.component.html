@@ -1,0 +1,61 @@
+<h1>Zeefoods</h1>
+<div class="search">
+  
+    <div>
+      <select name="options" id="" (change)="chosenOption($event)" style="border:1px solid black;">{{option}}
+        <option value="food">food</option>
+        <option value="restaurant">restaurant</option>
+        <option value="location">location</option>
+      </select>
+    </div>
+    <div class="grid2Column">
+  
+      <input type="search" placeholder="search here....." name="" id="" class="form-control "  [ngModel]="searchItem" (ngModelChange)="searchItems($event)">{{searchItem}}
+    </div>
+  
+  
+</div>
+<div class="main container">
+  <div class="row">
+    <div class="filters   col-md-3">
+        <div class="checkBox p-3">
+          <h5>Sort by  Restaurant</h5>
+          <div class="pb-2">
+      
+            <input type="checkbox" name="Mehfil"  #res1 id="1" value="Mehfil" class="form-check-input mx-2" (click)="checkBox(res1)">Mehfil
+          </div>
+          <!-- {{res1}} -->
+          <div class="pb-2">
+      
+            <input type="checkbox" name="Paradise" #res2 id="2" value = "Paradise" class="form-check-input mx-2" (click)="checkBox(res2)">Paradise
+          </div>
+        </div>
+        <div class="radioBox mt-2 p-3">
+          <!-- {{res2}} -->
+          <h5> Sort by Price</h5>
+          <div class="pb-2">
+            <input type="radio" name="price" id="" #price1 value='100' class="form-check-input mx-2 "  (click)="radioBox(price1)"> {{below100}}
+          </div>
+          <div class="pb-2">
+            <input type="radio" name="price" id="" #price2  value = '200' class="form-check-input mx-2 "  (click)="radioBox(price2)"> 100-200
+      
+          </div>
+          <div class="pb-2">
+            <input type="radio" name="price" id=""  #price3 value='300' class="form-check-input mx-2 " (click)="radioBox(price3)">200 & above
+          </div>
+          
+        </div>
+        <div class="removeFilters">
+          <button (click)="clearFilters(res1,res2,price1,price2,price3)">clear all filters</button>
+        </div>
+    </div>
+    <div class="menu col-md-6">
+      <app-menu [inputChild]="totalItems"></app-menu>
+    </div>
+    <div class="cart col-md-3">
+      <app-cart></app-cart>
+    </div>
+  </div>
+  
+</div>
+
